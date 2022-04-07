@@ -34,12 +34,12 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@v3
-        with:
-          images: |
-            ghcr.io/${{ github.repository_owner }}/caddy
+#      - name: Extract metadata (tags, labels) for Docker
+#        id: meta
+#        uses: docker/metadata-action@v3
+#        with:
+#          images: |
+#            ghcr.io/${{ github.repository_owner }}/caddy
             
       - name: Build and push Docker images
         uses: docker/build-push-action@v2
